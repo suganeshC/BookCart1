@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header.component';
-import { CartPageComponent } from './component/cart-page/cart-page.component';
-import { LoginComponent } from './component/login/login.component';
-import { ErrorPageComponent } from './component/error-page/error-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ErrorPageComponent } from './component/error-page/error-page.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
