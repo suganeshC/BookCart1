@@ -1,33 +1,17 @@
 
-<div class="header">
-
-    <a routerLinkActive="active" routerLink="home" ><i class="fa-solid fa-truck-fast"></i> Book Cart</a>
-  
-    <span class="search">
-      <input type="search" placeholder="Search books or authors">
-    </span>
-  
-  
-  <div class="icons">
-    <a routerLinkActive="active" routerLink="toast" ><i class="fa-solid fa-cart-arrow-down"></i></a>
-    <a routerLinkActive="active" routerLink="login" >login</a>
-    <a routerLinkActive="active" routerLink="" >Swagger</a>
-    <a routerLinkActive="active" routerLink="" ><i class="fa-brands fa-github"></i> Github</a>
-  </div>
-  </div>
-  <div class="container" style="align-items: center;">
+<div class="container" style="align-items: center;">
     <div class="row">
 
-        <ng-container *ngFor="let item of bookcart">      
+        <ng-container *ngFor="let item of bookcart">
 
-        <div class="card col-md-3">
+            <div class="card col-md-3">
 
-            <img src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}" alt="">
-            <h4><b>{{item.title}}</b></h4>
-            <p><b>Price: </b>{{item.price | currency:'INR' }}</p>
-            <button class="btn btn-primary btn-sm">Add to cart</button>
-            
-        </div>
-    </ng-container>
+                <img src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}" alt="">
+                <h4><b>{{item.title}}</b></h4>
+                <p>{{item.price | currency:'INR' }}</p>
+                <button mat-raised-button color="primary">Add to cart</button>
+
+            </div>
+        </ng-container>
     </div>
 </div>
